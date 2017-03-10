@@ -1,0 +1,6 @@
+# virtual env
+utscode/*
+# stuff from pycharm
+.idea/
+.idea/vcs.xml
+utscode/

@@ -1,2 +1,2 @@
 # utscode
-problems for the contest
+problem statements for the contest 
