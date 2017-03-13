@@ -18,9 +18,9 @@ def put_to_file(list_len, list, path):
         open_file.write('\n')
 
 T = 20
-for t in range(20):
+for t in range(4, 20):
     N = randint(0, 5000)
     arr = []
     for i in range(N):
         arr.append(randint(0, 2^31-1))
-    put_to_file(N, arr, 'secret/{testcase}.in'.format(testcase=t))
+    put_to_file(N, arr, 'secret/{testcase}.in'.format(testcase=str(t).zfill(2)))

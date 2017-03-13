@@ -1,1 +1,1 @@
-Compute in quadratic or linear time the longest contiguous increasing subsequence.
+Simulate the game.

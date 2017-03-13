@@ -4,18 +4,18 @@ import re
 import sys
 
 integer = "(0|-?[1-9]\d*)"
-one_int_first_line = re.compile(integer + "\n")
+two_int_first_line = re.compile(integer + " " + integer + "\n")
 single_integer = re.compile(integer)
 
 line = stdin.readline()
-assert one_int_first_line.match(line)
-n = int(line)
-assert 0 <= n <= 5000
+assert two_int_first_line.match(line)
+n, m = map(int, line.split())
+assert 0 <= n <= 5000 and 0 <= m <= 5000
 
-line_two = stdin.readline().split(' ')
-assert len(line_two) == n
 for i in range(n):
-    assert line_two[i].match(single_integer)
-    assert 0 <= int(line_two[i])  <= 2^31-1
-
+    elements = stdin.readline().strip().split(' ')
+    assert len(elements) == m
+    for j in range(m):
+        assert single_integer.match(elements[j])
+        assert 0 <= int(elements[j]) <= 2**31-1
 sys.exit(42)

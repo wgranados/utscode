@@ -1,23 +1,24 @@
-\problemname{The Way Forward}
+\problemname{Get Yer Armor Here}
 
-The Marshal of the Pact, Firstborn Trahearne, is trying to bring the fight to the fearsome Elder Dragon Mordremoth. The
-Elder Dragon is a formidable foe, wielding powerful ancient magic and commanding hordes of undead servants. The way to
-Mordremoth, however, is filled with enemy strongholds of varying strength. The Pact forces must take over these
-strongholds before they can proceed. Trahearne has called on you, the Commander of the Pact, to act as his advisor and
-draft out a strategy for him. \\
+Torbjörn, a small dwarf who excels in creating armor packs from Scrap Metal, is surveying a map representing a
+battlefield. He’s been airdropped into the middle of this battlefield, which is represented by a rectangular N x M 2D
+matrix. \\
 
-Trahearne’s explains that his forward scouts have recently come back with a report that indicates the estimated enemy
-strength at each stronghold. He talks tactics and strategy for a while before posing a task to you. He hands you the
-scouting report, and explains that to be successful in his quest, he must be prepared for the worst campaign possible.
-Trahearne describes a campaign as a series of strongholds where the enemy strength at each subsequent stronghold is
-strictly stronger than the previous stronghold. \\
+Torbjörn, a small dwarf who excels in creating armor packs from Scrap Metal, is surveying a map representing a
+battlefield. He’s been airdropped into the middle of this battlefield, which is represented by a rectangular N x M
+2D matrix. \\
 
-Trahearne asks you to find the length of the longest campaign in the way forward, so that he may rally his troops and
-prepare the necessary resources for the battle ahead. He notes that there may be equally long campaigns, but he only
-cares about the length of the longest campaign. \\
+On each turn, Torbjörn will collect the scrap metal available on the square that he is currently on, and then move
+either one square up, down, left, or right, choosing the square that has the most available scrap metal. If there is no
+more scrap metal available in any adjacent squares, Torbjörn will request an extraction and call the mission complete.
+You may assume that Torbjörn will never be forced to choose between adjacent squares with the same number of scrap
+metal. \\
 
+Write a program that given input as the field matrix, returns the maximum number of scrap metal that the Torbjörn
+collect from the battlefield. You may assume that the matrix is rectangular with at least 1 row and 1 column, and it is
+populated with non-negative integers. \\
 
 \section*{Input}
-You will be given $0 \leq N \leq 5000$, followed by another line of $N$ integer values.
+You will be given $1 \leq N,M \leq 5000$, followed by $N$ lines, each containing $M$  non-negative integers.
 \section*{Output}
 Output the longest campaign that Trahearne’s army will have to endure to face Mordremoth. \\
