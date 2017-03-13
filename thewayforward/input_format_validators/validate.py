@@ -12,10 +12,11 @@ assert one_int_first_line.match(line)
 n = int(line)
 assert 0 <= n <= 5000
 
-line_two = stdin.readline().split(' ')
+line_two = stdin.readline().strip().split(' ')
 assert len(line_two) == n
+
 for i in range(n):
-    assert line_two[i].match(single_integer)
-    assert 0 <= int(line_two[i])  <= 2^31-1
+    assert single_integer.match(line_two[i])
+    assert 0 <= int(line_two[i]) <= 2**31-1
 
 sys.exit(42)
