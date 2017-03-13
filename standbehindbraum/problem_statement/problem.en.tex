@@ -1,0 +1,22 @@
+\problemname{Stand Behind Braum!}
+
+Braum is a tank character in the Multiplayer Online Battle Arena game League of Legends. Braum’s task is to absorb as much damage from the enemy so that his allies may win the fight.
+Given an incoming onslaught of attacks, Braum wants to calculate the Total Damage he’ll take.
+Attacks come in three damage types, Physical Damage, Magical Damage, and True Damage.
+We can calculate the Total Damage Taken as a sum of the Physical, Magical, and True Damage Taken:
+\begin{center}
+	Physical Damage Taken &= 	Physical Damage * (100 / (100 + Armor)) \\
+	Magical Damage Taken  &= 	Magical Damage * (100 / (100 + MR)) \\
+	True Damage Taken 	&= 	True Damage \\
+\end{center}
+Braum notices that the total damage incoming is in a constant proportion, $\alpha + \beta + \tau = 1$
+Where the values of $\alpha$, $\beta$, $\tau$ =
+$\alpha$ = Physical Damage / Total Damage
+$\beta$ = Magical Damage / Total Damage
+$\tau$ = True Damage / Total Damage
+
+\section*{Input}
+You will be given two lines of input. The first line contains α, β, τ, x representing the percent of Physical, Magical, True, and Total damage. The second line contains the Armor and MR values that Braum has.
+
+\section*{Output}
+Output the Total Damage Taken by Braum from the incoming attacks, rounded down to the nearest integer value.
