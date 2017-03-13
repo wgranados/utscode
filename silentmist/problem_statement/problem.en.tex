@@ -1,0 +1,38 @@
+\problemname{Silent Mist}
+\illustration{.4}{mist}{Wikimedia, cc-by-sa}
+
+
+
+After a long and ardous journey you and your convoy, have finally entered the the Mist Dragon's domain, Niebla. Upon
+entering the Niebla's domain you notice a dangerous mist engulf the area and your units immediately lose some health. In
+desperation you look around for some answers and notice a royal knight slumped on one of the trees nearby. \\
+
+As you approach the knight you notice that they must have passed out a few hours ago from the exposure to the mist. In
+their hand they hold a letter with the king's seal. You immediately fetch it from the tacticians's cold hands, and begin
+reading the letter. \\
+
+\begin{minipage}[t]{6in}
+To my Royal Guard, \\
+
+It would seem you have walked into quite a predicament.  You see here, this mist has some special properties. Attached
+to the back of this letter are several safe points I have outlined on campus. If you stay on these safe points you will
+stay on track. The paths are quite dense with this fog, and you can only stand an accumulated mist density of $T$ over
+all the paths you travel. For should you pass this amount, you will meat your doom. \\ \\
+Best,\\
+The King \\
+\end{minipage}
+
+
+The mysterious man then walks into the fog and disappears. Luka is quite stressed for time, and needs to meet up with some of his friends ASAP. It is your job to help him with this task, he has provided you with the layout of the safe spots and paths on campus and would like to know the length of the shortest path required to reach his destination.
+
+Given $n$, the number of bells, output an ideal performance. All possible rows must be present
+exactly once, and the first row should be $1, 2, \dots, n$.
+
+
+\section*{Input}
+
+The first line will consist of three integers, $S, P, T$, each representing the number of safe spots, the number of paths, and the maximum amount of mist you can endure. Here $2 \leq S \leq 100,000$, $ 0 \leq P \leq S^2$ and $1 \leq T \leq 1000$. Following this will consist of $S$ lines composed of four integers $u_i, v_i, t_i, m_i$, where $1 \leq u_i,v_i \leq S$ and $1 \leq t_i, m_i \leq 1000$. Each representing respectively the starting safe spot, the ending safe spot, and the density of the mist in this path. Following this will be two positive integers $B$, starting point and $E$, destination.
+
+\section*{Output}
+
+Your output should consist of one integer, being the minimum amount of time required for Luka to get from his starting point, to his destination.
