@@ -1,0 +1,3 @@
+Compute in linear time a center vertex for each of the input trees and
+connect every center vertex to one specific center vertex which
+maximizes the radius.
