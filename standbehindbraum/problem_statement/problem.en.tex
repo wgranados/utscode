@@ -1,22 +1,29 @@
 \problemname{Stand Behind Braum!}
 
-Braum is a tank character in the Multiplayer Online Battle Arena game League of Legends. Braum’s task is to absorb as much damage from the enemy so that his allies may win the fight.
+Braum is a tank character in the Multiplayer Online Battle Arena game League of Legends. Braum’s task is to absorb as
+much damage from the enemy so that his allies may win the fight. \\
+
 Given an incoming onslaught of attacks, Braum wants to calculate the Total Damage he’ll take.
-Attacks come in three damage types, Physical Damage, Magical Damage, and True Damage.
+Attacks come in three damage types, \textbf{Physical Damage}, \textbf{Magical Damage}, and \textbf{True Damage}.
 We can calculate the Total Damage Taken as a sum of the Physical, Magical, and True Damage Taken:
-\begin{center}
-	Physical Damage Taken &= 	Physical Damage * (100 / (100 + Armor)) \\
-	Magical Damage Taken  &= 	Magical Damage * (100 / (100 + MR)) \\
-	True Damage Taken 	&= 	True Damage \\
-\end{center}
-Braum notices that the total damage incoming is in a constant proportion, $\alpha + \beta + \tau = 1$
-Where the values of $\alpha$, $\beta$, $\tau$ =
-$\alpha$ = Physical Damage / Total Damage
-$\beta$ = Magical Damage / Total Damage
-$\tau$ = True Damage / Total Damage
+
+\begin{align*}
+    \text{Physical Damage Taken} &= \text{Physical Damage} \cdot \left( \frac{100}{100 + \text{Armor}}\right) \\
+    \text{Magical Damage Taken} &= \text{Magical Damage} \cdot \left( \frac{100}{100 + \text{MR}}\right) \\
+    \text{True Damage Taken} &= \text{True Damage}
+\end{align*}
+
+Braum notices that the total damage posseses the following relationship, $\alpha + \beta + \tau = 1$ . And furthermore
+where the values of $\alpha, \beta, \tau$ possess the following relationships:
+\begin{align*}
+    \alpha &= \frac{\text{Physical Damage}}{\text{Total Damage}} \\
+    \beta &= \frac{\text{Magical Damage}}{\text{Total Damage}} \\
+    \tau  &= \frac{\text{True Damage}}{\text{Total Damage}}\\
+\end{aling*}
 
 \section*{Input}
-You will be given two lines of input. The first line contains α, β, τ, x representing the percent of Physical, Magical, True, and Total damage. The second line contains the Armor and MR values that Braum has.
+You will be given two lines of input. The first line contains $\alpha$, $\beta$, $\tau$, and $x$ representing the
+percent of Physical, Magical, True, and Total damage. The second line contains the Armor and MR values that Braum has.
 
 \section*{Output}
 Output the Total Damage Taken by Braum from the incoming attacks, rounded down to the nearest integer value.
