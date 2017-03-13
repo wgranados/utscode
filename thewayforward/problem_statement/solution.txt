@@ -1,1 +1,1 @@
-Compute in quadractic or linear time the longest contiguous increasing subsequence.
+Compute in quadratic or linear time the longest contiguous increasing subsequence.
