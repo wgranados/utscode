@@ -1,0 +1,49 @@
+\problemname{Dangerous Tiles}
+\illustration{.5}{dangtile}{Photo by \href{http://imgur.com/a/5Hnmv}{William}}
+
+
+\noindent Being the true (pretend) \href{https://en.wikipedia.org/wiki/Fire_Emblem}{Fire Emblem} fan  that
+you are, you have played the game long enough to understand the most appealing aspect of the game is its
+\textbf{permadeath} feature.  This feature entailing that when a unit dies in the game, they will become unplayable for all
+future battles (quite a grim fate). \\
+
+\noindent In the illustration to the right, we can see a sample configuration for a 5 by 5 grid with 2 enemies and
+units. In this case the green and red units have a \textbf{move} range of 1; meaning they can move through any adjacent tile
+(vertical or horizontal). The \textbf{danger zone} indicated by the shaded region, show tiles that are not safe for
+your units \\ to occupy. \\
+
+\noindent  Fire Emblem is a turn based RPG, meaning that at the start of each turn, you can select to move all or some
+of your units. As soon as your turn ends, the enemy's turn begins, and they will move their units to approach and
+attack the closest alive unit in their \textbf{proximity}.  A vulnerable unit is considered to be in another unit's
+proximity if the other unit can move themselves to be directly adjacent to the vulnerable unit. After this exchange,
+the next turn begins and the fun ensues!\\
+
+
+\noindent After several visits to the AMAACS office, you hear the noticable groans from one of the executives as they
+loudly, exclaim: "I CAN'T BELIEVE HE KILLED ME, AGAIN!". As you speak with him he explains to you how he can't get
+passed this level since an enemy unit always manages to kill one of his characters.  Being the true Emblemier that you
+are, you realize that this is the enfuriating RNG chapter, where at the start of the match:
+\begin{align*}
+1 &: \text{All of your unit's are positioned randomly across the grid, with no two units being adjacent.}\\
+2 &: \text{All of your units move are reduced to 1 and our stripped of their weapons for the duration of this turn.} \\
+3 &: \text{All of your enemy units' are positions and move are chosen randomly, units may be adjacent with your own units} \\
+4 &: \text{Enemy units are granted INSTA-KILL hits on any of your units in their proximity}
+\end{align*}
+
+\noindent The mission objective of this map isn't to fight off the enemies, instead it is to sucessfully survive the
+first turn.\\
+
+\noindent You have decided to team up with the executive to tackle this chapter, as he provides you with the grid
+information, you must provide with the most optimal movements for each unit to end this turn, or tell him to soft-reset
+and try the next configuration. \\
+
+\section*{Input}
+The first line of input will consist four integers, $1 \leq N, M \leq 20$, the dimensions for the grid.
+$0 \leq E ,\, U \leq 10$, the number of enemy units and your units respectively. $E$ lines , $r_i, c_i, m_i$, indicating
+the enemy's coordinates and the movement for the character, followed by $U$ lines consting of $r_i, c_i$, indicating
+ you unit's coordinates. You may assume the following: $1 \leq r_i \leq N, 1 \leq c_i \leq M, 1 \leq m_i \leq M*N$ \\
+
+\section*{Output}
+If the current configuration is impossible output the phrase "soft-reset!". Otherwise, for each of your units, in the
+same order provided as in the input, the new $r_i, c_i$ values for this unit.
+
