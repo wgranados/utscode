@@ -1,0 +1,50 @@
+\problemname{One Last Stand!}
+\illustration{.5}{hydra}{\href{https://www.goodfreephotos.com/albums/vector-images/hydra-silhouette-vector-clipart.png}{GoodFreePhotos.com}, public domain}
+
+\noindent You and your convoy thankfully managed to get through the the Mist Dragon's --- Niebla --- domain unharmed. All thanks to your
+talented tactician. The mist seems to have settled and now doesn't bother you as much. \\
+
+\noindent But, as you continue walking, you notice that the mist gets thicker. You look back and can barely make out the silhoette,
+of the members of your convoy, when suddenly you feel your feet sink into some water. You immediately face forward and notice
+a grand lake before you. \\
+
+\noindent As your eyes adjust to the thickness of the mist, you see a huge silhouette approaching you. As it approaches you hear
+it sound become ever more vicous. In the blink of an eye, standing there before you is the Mist Dragon Niebla, the infamous hydra! \\
+
+\noindent The mist dragon immediately attacks you, luckily you manage to block just in time. Suddenly Niebla loses a
+few heads. But that can't be right, old stories and folklore have taught you that hydras only grow heads when they are
+attacked. Before you can finish this thought Niebla attacks again as you manage to defend just in the nick of time .
+This time Niebla has grew some heads. The madness, this beast does not follow conventional logic! You decide to take the
+ brunt of the Niebla's next attck so you can study this pattern. Niebla attacks and not too soon after you manage to
+ cut off a head, this time Niebla seems to have lost some more in addition to the one you just cut off. A
+thought crosses your head,  "Maybe Niebla is too unstable to be able to properly grow more heads, so it loses some
+in the process". To test your hypothesis you decide to cut off one final head. This time Niebla has simply loses the head
+you cut off. \\
+
+\noindent It would seem your enemy Niebla is an unstable beast, it seems to grow or decrease its head count almost at
+random. But one thing you do notice is that there is a one-to-one correspondance to the number of heads Niebla has before
+and after you decide to attack (i.e. Niebla will never enter a state where it has $x$ heads and suddenly go to either
+$y$ heads or $z$ heads where $y \neq z$). This is great! It just might be possible to finish your long journey here
+and now! \\
+
+\noindent Unforunately you're on a timer, you only have a limited amount of health points left and for each turn where
+you decide to defend yourself from Niebla's attack you lose 1 health point, and when you decide to take the brunt of the
+Niebla's attack you take damage equivalent to the current number of heads that Niebla has. As previously dicussed Niebla
+always follows a set of rules when determing it's head count after a set of moves. In the cases where a rule is not
+specified for a certain head cout, you may assume Niebla will only lose 1 head if you attack. Furthermore, Niebla will
+keep on attack you on each turn until it has reached 0 heads, or you have reached 0 or less health. \\
+
+\noindent So you must choose quickly if it is possible to defeat Niebla or to retreat to your army and face Niebla
+some other day.\\
+
+\section*{Input}
+
+The first line of input conists of three integers, $1 \leq N, H, R \leq 5000$, representing the current number of heads
+Nieblas has, the current amount of health you have, and the amount of rules that Niebla follows with respect to its
+head count. Following this will be $R$ lines of input consisting two integers $1 \leq n_i , n_j \leq 5000$ representing one
+rule Niebla must always follows when determining it's head count. You may assume that Niebla's head count will never
+exceed 5000. \\
+
+\section*{Output}
+Should it be impossible to defeat Niebla, you should print the phrase "retreat", otherwise we would like to know the
+minimum such sequences of moves required to defeat Niebla. \\

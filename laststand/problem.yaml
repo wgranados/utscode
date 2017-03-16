@@ -1,12 +1,10 @@
 source: UTSCode Contest 2017
 source_url: http://www.utsc.utoronto.ca/~csec/index.html
-author: William Granados
+author: Brian Chen
 license: cc by-sa
 
 limits:
     time_multiplier: 3
-
-validation: custom
 #    time_safety_margin: 2
 #    memory: 4096
 #    output: 16
