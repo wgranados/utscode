@@ -13,7 +13,7 @@ def damageCalc(inc, res):
 
 if __name__ == '__main__':
     # Parse input lines
-    firstLine = input()
+    firstLine = raw_input()
     fl_items = firstLine.split()
     # Percentages
     phys = float(fl_items[0])
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     tot = float(fl_items[3])
     
     # Parse input lines
-    secondLine = input()
+    secondLine = raw_input()
     sl_items = secondLine.split()
     # Resistances
     arm = float(sl_items[0])
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     dmgTaken += damageCalc(mgcDmg, mr)
     dmgTaken = math.floor(dmgTaken)
     
-    print(dmgTaken)
+    print(int(dmgTaken))
