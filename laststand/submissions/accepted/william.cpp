@@ -1,48 +1,30 @@
 #include<bits/stdc++.h>
+#define MAXN 5001
+#define MAXH 5001
+#define INF 0x3f3f3f3f
 using namespace std;
 
-int N, M;
-int A[5001][5001];
+int N,H,R;
+int rules[MAXN];
+int DP[MAXN][MAXH];
 
-int dr[] = {-1, 0, 1, 0};
-int dc[] = {0, 1, 0, -1};
+void rec(int num_heads, int cur_health) {
+    int next_head_if_attack = rules[num_heads];
+    int next_health_if_attack = cur_health-num_heads;
 
-bool within_range(int r, int c) {
-    return 0 <= r && r < N && 0 <= c && c < M;
-}
-
-bool is_possible(int r, int c) {
-    for(int d = 0;d < 4;d++) {
-        if(within_range(r+dr[d], c+dc[d]) && A[r+dr[d]][c+dc[d]] != 0){
-            return true;
-        }
-    }
-    return false;
 }
 
 int main() {
-    cin >> N >> M;
-    for(int i = 0;i < N;i++) {
-        for(int j = 0;j < M;j++) {
-            cin >> A[i][j];
-        }
+    cin >> N >> H >> R;
+    memset(DP, INF, sizeof(DP));
+    for(int i = 0;i < MAXN;i++) {
+        rules[i] = i;
     }
-    int r = 0, c = 0, ans = 0;
-    while(is_possible(r, c)) {
-        int best = 0, dir = 0;
-        for(int d = 0;d < 4;d++){
-            if(within_range(r+dr[d], c+dc[d]) && A[r+dr[d]][c+dc[d]] != 0){
-                if(best < A[r+dr[d]][c+dc[d]] ){
-                    best = A[r+dr[d]][c+dc[d]];
-                    dir = d;
-                }
-            }
-        }
-        ans += best;
-        r += dr[dir];
-        c += dc[dir];
-        A[r][c] = 0;
+    for(int i = 0;i < R;i++) {
+        int n_i, n_j;
+        cin >> n_i >> n_j;
+        rules[n_j] = n_j;
     }
-    cout << ans << endl;
+    rec(N, H);
     return 0;
 }
