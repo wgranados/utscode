@@ -92,7 +92,7 @@ int main() {
         dfs(enemies[i].first, enemies[i].second.first, enemies[i].second.second+1);
     }
     dfs_brute(units.size()-1);
-    // dfs_brute exectures exit(0) on successful brute force
+    // dfs_brute executes exit(0) on successful brute force
     cout << "soft-reset!" << endl;
     return 0;
 }
