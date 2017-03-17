@@ -1,38 +1,52 @@
 \problemname{Silent Mist}
-\illustration{.4}{mist}{Wikimedia, cc-by-sa}
+\illustration{.4}{fog}{\href{https://pixabay.com/p-594286/?no_redirect}{pixabay}, CC0}
 
 
 
-After a long and ardous journey you and your convoy, have finally entered the the Mist Dragon's domain, Niebla. Upon
-entering the Niebla's domain you notice a dangerous mist engulf the area and your units immediately lose some health. In
-desperation you look around for some answers and notice a royal knight slumped on one of the trees nearby. \\
+\noindent After a long and ardous journey you and your convoy, have finally entered the the Mist Dragon's domain,
+Niebla. Upon entering the Niebla's domain you notice a dangerous mist engulf the area and your units immediately lose
+some health. The members all turn to you for answers, and in desperation you look around and notice a royal knight
+slumped on one of the trees nearby. \\
 
-As you approach the knight you notice that they must have passed out a few hours ago from the exposure to the mist. In
-their hand they hold a letter with the king's seal. You immediately fetch it from the tacticians's cold hands, and begin
-reading the letter. \\
+\noindent As you approach the knight you notice that they must have passed away from from the exposure to the mist, how
+unforuntate. In their hand they hold a letter with the king's seal. You fetch the letter from the knightus cold hands,
+and begin reading it: \\
 
 \begin{minipage}[t]{6in}
 To my Royal Guard, \\
 
-It would seem you have walked into quite a predicament.  You see here, this mist has some special properties. Attached
-to the back of this letter are several safe points I have outlined on campus. If you stay on these safe points you will
-stay on track. The paths are quite dense with this fog, and you can only stand an accumulated mist density of $T$ over
-all the paths you travel. For should you pass this amount, you will meat your doom. \\ \\
+By the time you will have opened this letter you will have reached Niebla's domain, a truly dreadful place. As you may
+have already noticed, the mist poses a hazard to your health. Your health points will be drained, on certain
+\textbf{dangerous} paths, and you will suffer damage equal to the time need to cross. I have managed to get our
+country's best wizards to conjure a potion which will make you temporarily invulnerable when passing through a dangerous
+path. Unfortunately this potion is in limited reserves, so use it wisely. \\
+
+We will provide you a map on the back of this letter outlining the safe points within the mist, and the relative danger
+of the mist between these safe points, collected over several of our past expeditions in this domain.\\
+
 Best,\\
 The King \\
 \end{minipage}
 
 
-The mysterious man then walks into the fog and disappears. Luka is quite stressed for time, and needs to meet up with some of his friends ASAP. It is your job to help him with this task, he has provided you with the layout of the safe spots and paths on campus and would like to know the length of the shortest path required to reach his destination.
 
-Given $n$, the number of bells, output an ideal performance. All possible rows must be present
-exactly once, and the first row should be $1, 2, \dots, n$.
-
+\noindent With this information in hand, you would like to determine if possible,  the shortest time required to get
+through the Niebla's domain, with the mist's constraints on your health. \\
 
 \section*{Input}
 
-The first line will consist of three integers, $S, P, T$, each representing the number of safe spots, the number of paths, and the maximum amount of mist you can endure. Here $2 \leq S \leq 100,000$, $ 0 \leq P \leq S^2$ and $1 \leq T \leq 1000$. Following this will consist of $S$ lines composed of four integers $u_i, v_i, t_i, m_i$, where $1 \leq u_i,v_i \leq S$ and $1 \leq t_i, m_i \leq 1000$. Each representing respectively the starting safe spot, the ending safe spot, and the density of the mist in this path. Following this will be two positive integers $B$, starting point and $E$, destination.
+\noindent The first line of input will consist of three integers $N, M, T, P$
+( $2 \leq N, H \leq 5000$, $ 1 \leq M \leq N^2$, $1 \leq P \leq 10$), representing the the number of safe spots, the
+number of paths, the amount of time your convoy can withstand in dangerous mist before they perish, and the amount of
+uses the king's potion(s) will allow. \\
+
+\noindent Following this will be $M$ lines composed of four integers describing the information of a path:
+$u_i~ v_i, t_i, m_i$ \\ ($1 \leq u_i,v_i \leq S$ and $1 \leq t_i, m_i \leq 10000$), representing the starting safe point,
+the ending safe point, the time required to traverse this path, and 1 if this path is dangerous, 0 otherwise; this path
+is bidrectional. Following this will be two integers $S$, the safe spot you begin your journey
+from and, $E$, the last safe spot this is outside of Niebla's domain. \\
 
 \section*{Output}
 
-Your output should consist of one integer, being the minimum amount of time required for Luka to get from his starting point, to his destination.
+Your output should consist of one integer, being the minimum amount of time required to get your convoy from $S$ to
+$E$. if this is impossible then print the phrase "retreat".

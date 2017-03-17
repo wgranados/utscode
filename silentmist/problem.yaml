@@ -4,11 +4,13 @@ author: William Granados
 license: cc by-sa
 
 limits:
-    time_multiplier: 3
-#    time_safety_margin: 2
-#    memory: 4096
+    time_multiplier: 10
+    time_safety_margin: 10
+    memory: 4096
 #    output: 16
-#    compilation_time: 240
+    compilation_time: 240
+    compilation_time: 240
+    compilation_memory: 10000
 #    validation_time: 240
 #    validation_memory: 3072
 #    validation_output: 4
