@@ -5,8 +5,7 @@ license: cc by-sa
 
 limits:
     time_multiplier: 3
-
-validation: custom
+    validation: default
 #    time_safety_margin: 2
 #    memory: 4096
 #    output: 16

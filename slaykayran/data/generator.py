@@ -2,7 +2,7 @@ from random import randint
 
 
 
-def put_to_file(list_len, list, path):
+def put_to_file(N, H, R, list, path):
     """ Puts testcase to file in secret folder.
 
     :param list_len: int, number of elements in list
@@ -12,15 +12,17 @@ def put_to_file(list_len, list, path):
     """
     with open(path, 'a+') as open_file:
         open_file.seek(0, 0)
-        open_file.write(str(list_len) + '\n')
-        for i in range(list_len):
-            open_file.write(str(list[i]) + ' ')
+        open_file.write(str(N) + ' ' + str(H) + ' ' + str(R) + '\n')
+        for i in range(len(list)):
+            open_file.write(str(list[i][0]) +  ' ' + str(list[i][1]) +'\n')
         open_file.write('\n')
 
 T = 20
 for t in range(4, 20):
-    N = randint(0, 5000)
+    N = randint(2, 500)
+    H = randint(2, 500)
+    R = randint(2,500)-1
     arr = []
-    for i in range(N):
-        arr.append(randint(0, 2^31-1))
-    put_to_file(N, arr, 'secret/{testcase}.in'.format(testcase=str(t).zfill(2)))
+    for i in range(1, R+1):
+        arr.append((i, randint(1, N)))
+    put_to_file(N, H, R, arr, 'secret/{testcase}.in'.format(testcase=str(t).zfill(2)))
