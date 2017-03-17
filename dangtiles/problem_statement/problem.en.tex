@@ -34,8 +34,8 @@ are, you realize that this is the enfuriating RNG chapter, where at the start of
 first turn.\\
 
 \noindent You have decided to team up with the executive to tackle this chapter, as he provides you with the grid
-information, you must provide with the most optimal movements for each unit to end this turn, or tell him to soft-reset
-and try the next configuration. \\
+information, you must provide with the must tell him if an optimal movement exists for each unit to end this turn safely
+, or tell him to soft-reset and try the next configuration. \\
 
 \section*{Input}
 The first line of input will consist four integers, $1 \leq N, M \leq 20$, the dimensions for the grid.
@@ -44,6 +44,5 @@ the enemy's coordinates and the movement for the character, followed by $U$ line
  you unit's coordinates. You may assume the following: $1 \leq r_i \leq N, 1 \leq c_i \leq M, 1 \leq m_i \leq M*N$ \\
 
 \section*{Output}
-If the current configuration is impossible output the phrase "soft-reset!". Otherwise, for each of your units, in the
-same order provided as in the input, the new $r_i, c_i$ values for this unit.
+If the current configuration is impossible output the phrase "soft-reset!". Otherwise, output the phrase "safe"
 

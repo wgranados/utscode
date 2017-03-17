@@ -58,9 +58,7 @@ void dfs_brute(int troop){
                 return;
             }
         }
-        for(int i = new_loc.size()-1;i >= 0;i--){
-            cout << new_loc[i].first+1 << " " << new_loc[i].second+1 << endl;
-        }
+        cout << "safe" << endl;
         exit(0);
     }
 }
