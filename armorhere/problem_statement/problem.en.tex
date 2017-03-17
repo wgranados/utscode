@@ -1,24 +1,25 @@
 \problemname{Get Yer Armor Here}
 
 Torbjörn, a small dwarf who excels in creating armor packs from Scrap Metal, is surveying a map representing a
-battlefield. He’s been airdropped into the middle of this battlefield, which is represented by a rectangular N x M 2D
-matrix. \\
+battlefield. He has been airdropped into the middle of this battlefield, which is represented by a rectangular N x M 2D
+matrix. He wishes to collect as much scrap metal as he can before requesting an extraction.\\
 
-Torbjörn, a small dwarf who excels in creating armor packs from Scrap Metal, is surveying a map representing a
-battlefield. He’s been airdropped into the middle of this battlefield, which is represented by a rectangular N x M
-2D matrix. \\
+The values of the matrix will represent the number of number of scrap metal available to Torbjörn at each location in the 
+battlefield. If the field doesn’t have an exact center, assume that Torbjörn will start in the square closest to the center 
+with the highest scrap metal count.
 
 On each turn, Torbjörn will collect the scrap metal available on the square that he is currently on, and then move
 either one square up, down, left, or right, choosing the square that has the most available scrap metal. If there is no
-more scrap metal available in any adjacent squares, Torbjörn will request an extraction and call the mission complete.
+more scrap metal available in any adjacent squares, Torbjörn will request an extraction and deem the mission complete.
 You may assume that Torbjörn will never be forced to choose between adjacent squares with the same number of scrap
 metal. \\
 
-Write a program that given input as the field matrix, returns the maximum number of scrap metal that the Torbjörn
+Write a program that given input representing the map, returns the maximum number of scrap metal that the Torbjörn
 collect from the battlefield. You may assume that the matrix is rectangular with at least 1 row and 1 column, and it is
 populated with non-negative integers. \\
 
 \section*{Input}
-You will be given $1 \leq N,M \leq 5000$, followed by $N$ lines, each containing $M$  non-negative integers.
+You will be given $1 \leq N,M \leq 5000$, followed by $N$ lines, each containing $M$ non-negative integers representing the 
+available scrap metal at each point on the map.
 \section*{Output}
-Output the longest campaign that Trahearne’s army will have to endure to face Mordremoth. \\
+Output the maximum amount of scrap metal Torbjörn will collect from this map before being extracted.\\
