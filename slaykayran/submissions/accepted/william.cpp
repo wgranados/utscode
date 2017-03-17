@@ -29,6 +29,8 @@ int rec(int num_heads, int cur_health) {
         if(cur_health_if_attack > 0) {
             DP[num_heads][cur_health] = min(DP[num_heads][cur_health], 1+rec(num_head_if_attack, cur_health_if_attack));
         }
+        if(DP[num_heads][cur_health] == INF)// i.e.e impossible
+            DP[num_heads][cur_health] = INF+1;
         return DP[num_heads][cur_health];
     }
 }
@@ -45,7 +47,7 @@ int main() {
         rules[n_i] = n_j;
     }
     int ans = rec(N, H);
-    if(ans == INF)
+    if(ans >= INF)
         cout << "retreat" << endl;
     else
         cout << ans << endl;
