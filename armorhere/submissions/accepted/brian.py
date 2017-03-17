@@ -7,6 +7,9 @@ def findCenter(maze):
     origy = len(maze[0])
     x = origx / 2
     y = origy / 2
+    if origx == origy and (origx % 2 == 1):
+        return origx//2, origy//2
+
     if(origx == 1 and origy == 1):
         return 0, 0
     if(origx == 3 and origy == 3):
