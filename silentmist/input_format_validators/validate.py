@@ -9,19 +9,21 @@ single_integer = re.compile(integer)
 
 line = stdin.readline()
 try:
-    n, m , h, p = map(int, line.strip().split())
+    n, m , p = map(int, line.strip().split())
 except ValueError as e:
     assert False
-assert 2 <= n, h <= 5000 and 1 <= m <= 5000*5000 and 0 <= p <= 10
+assert 2 <= n <= 5000 and 1 <= m <= 5000*5000 and 0 <= p <= 10
 
 for i in range(m):
-    elements = stdin.readline().strip().split(' ')
-    assert len(elements) == 4
+    elements = stdin.readline().strip().split()
+    assert len(elements) == 3
     try:
-        u, v, t, m = map(int, elements)
+        u, v, t = map(int, elements)
     except ValueError:
         assert False
-    assert (1 <= u, v <= n) and (1 <= t, m <= 10000)
+    assert (1 <= u, v <= n)
+    print(i, t)
+    assert (1 <= t <= 20000)
 try:
     u, v = map(int, stdin.readline().strip().split(' ') )
 except ValueError:

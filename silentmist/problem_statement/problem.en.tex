@@ -9,20 +9,21 @@ some health. The members all turn to you for answers, and in desperation you loo
 slumped on one of the trees nearby. \\
 
 \noindent As you approach the knight you notice that they must have passed away from from the exposure to the mist, how
-unforuntate. In their hand they hold a letter with the king's seal. You fetch the letter from the knightus cold hands,
+unfortunate. In their hand they hold a letter with the king's seal. You fetch the letter from the knightus cold hands,
 and begin reading it: \\
 
 \begin{minipage}[t]{6in}
 To my Royal Guard, \\
 
 By the time you will have opened this letter you will have reached Niebla's domain, a truly dreadful place. As you may
-have already noticed, the mist poses a hazard to your health. Your health points will be drained, on certain
-\textbf{dangerous} paths, and you will suffer damage equal to the time need to cross. I have managed to get our
-country's best wizards to conjure a potion which will make you temporarily invulnerable when passing through a dangerous
-path. Unfortunately this potion is in limited reserves, so use it wisely. \\
+have already noticed, the mist poses a hazard to your health.  You must escape immedately, your lives depend on it!
+I have managed to get our country's best wizards to conjure a magic tome which will allow you to cast a spell that
+teleports your convoy from one safe spot to another, if and only if there is already a path between them. Unfortunately
+this tome only has a limited amount of uses, so use it wisely. \\
 
-We will provide you a map on the back of this letter outlining the safe points within the mist, and the relative danger
-of the mist between these safe points, collected over several of our past expeditions in this domain.\\
+We will provide you a map on the back of this letter outlining the safe points within the mist, and  the time required
+to travel on foot between some of these points which we have collected over several of our past expeditions
+in this domain.\\
 
 Best,\\
 The King \\
@@ -31,20 +32,19 @@ The King \\
 
 
 \noindent With this information in hand, you would like to determine if possible,  the shortest time required to get
-through the Niebla's domain, with the mist's constraints on your health. \\
+through the Niebla's domain, with the help of the tome. \\
 
 \section*{Input}
 
-\noindent The first line of input will consist of three integers $N, M, T, P$
-( $2 \leq N, H \leq 5000$, $ 1 \leq M \leq N^2$, $1 \leq P \leq 10$), representing the the number of safe spots, the
-number of paths, the amount of time your convoy can withstand in dangerous mist before they perish, and the amount of
-uses the king's potion(s) will allow. \\
+\noindent The first line of input will consist of three integers $N, M, S$
+( $2 \leq N \leq 5000$, $ 1 \leq M \leq N^2$, $1 \leq S \leq 10$), representing the the number of safe spots, the
+number of paths, and the amount of spells left on the king's tome before it breaks. \\
 
 \noindent Following this will be $M$ lines composed of four integers describing the information of a path:
-$u_i~ v_i, t_i, m_i$ \\ ($1 \leq u_i,v_i \leq S$ and $1 \leq t_i, m_i \leq 10000$), representing the starting safe point,
-the ending safe point, the time required to traverse this path, and 1 if this path is dangerous, 0 otherwise; this path
-is bidrectional. Following this will be two integers $S$, the safe spot you begin your journey
-from and, $E$, the last safe spot this is outside of Niebla's domain. \\
+$u_i, v_i, t_i$ \\ ($1 \leq u_i,v_i \leq S$ and $1 \leq t_i \leq 10000$), representing the starting safe point,
+the ending safe point, the time required to traverse this path on foot ; this path is bidrectional. Following this
+will be two integers $S$, the safe spot you begin your journey from and, $E$, the last safe spot this is outside of
+Niebla's domain. \\
 
 \section*{Output}
 

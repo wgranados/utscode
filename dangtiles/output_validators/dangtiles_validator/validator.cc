@@ -78,6 +78,55 @@ int manhatten_distance(pair<int,int>X, pair<int,int>Y) {
 /* Check one test case. */
 void check_case() {
     // gathering test case input
+    int N, M;
+    vector< pair<int, pair<int,int> > >enemies;
+    vector< pair<int,int> >units;
+    judge_in >> N >> M >> E >> U;
+    for(int i = 0;i < N;i++) {
+        int r,c,m;
+        judge_in >> r >> c >> m;
+        enemies.push_back(make_pair(r-1, make_pair(c-1,m)));
+    }
+    for(int i = 0;i < M;i++) {
+        int r,c;
+        judge_in >> r >> c;
+        enemies.push_back(make_pair(r-1, c-1));
+    }
+    // precomputing visited grid
+    bool v[50][50] ;
+    for(int i = 0;i < enemies.size();i++) {
+        dfs(enemies[i].first, enemies[i].second.first, enemies[i].second.second+1, v);
+    }
+    // verifying user input
+    string is_possible;
+    judge_out >> is_possible;
+    if(is_possible == "soft-reset!") {
+        string user_input;
+        author_out >>  user_input;
+        if(user_input != "soft-reset!") {
+            report_error("Wrong answer");
+        }
+    } else { // evauate positions of units provided by user
+       set< pair<int,int> >pos_loc;
+       int r,c;
+       for(int it = 0;!(author_out >> r >> c);it++) {
+            r--, c--;
+            if(!valid(r,c))
+                report_error("Wrong Answer");
+            if(manhatten_distance(units[it].first, units[it].second, r, c) > 1)
+                report_error("Wrong Answer");
+            if(v[r][c])
+                report_error("Wrong Answer");
+            if(!pos_loc.count(make_pair(r,c))) {
+                pos_loc.insert(make_pair(r,c))
+            } else{
+                report_error("Wrong Answer");
+            }
+       }
+       if(pos_loc.size() != U) {
+            report_error("Wrong Answer");
+       }
+    }
 }
 
 int main(int argc, char **argv) {
