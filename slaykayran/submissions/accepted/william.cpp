@@ -9,7 +9,6 @@ int rules[MAXN];
 int DP[MAXN][MAXH];
 
 int rec(int num_heads, int cur_health) {
-    //cout << num_heads <<  " " << cur_health << endl;
     if(num_heads == 0) {
         return 0;
     }
@@ -20,7 +19,8 @@ int rec(int num_heads, int cur_health) {
         // try defending
         int num_head_if_defend = rules[num_heads];
         int cur_health_if_defend  = cur_health-1;
-        if(cur_health_if_defend > 0) {
+        // avoid case where we constantly defend only to lose health, this is a lost battle anyway
+        if(cur_health_if_defend > 0 && rules[num_heads] != num_heads) {
             DP[num_heads][cur_health] = min(DP[num_heads][cur_health], 1+rec(num_head_if_defend, cur_health_if_defend));
         }
         // try attacking
