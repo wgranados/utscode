@@ -9,7 +9,7 @@ If you plan on making your own problems on the Kattis platform, then here are so
 important links required for to compile the problemstatements from source and verify
 the validity your solutions against the current testdata.
 
-https://github.com/Kattis/problemtools
-http://problemarchive.org/wiki/index.php/Introduction_to_the_Kattis_Problem_Format
-http://problemarchive.org/wiki/index.php/Problem_Format
+[Kattis problemtools](https://github.com/Kattis/problemtools)
+[Introduction to the Kattis Problem Format and problemtools](http://problemarchive.org/wiki/index.php/Introduction_to_the_Kattis_Problem_Format)
+[Indepth information on using the Kattis problemtools](http://problemarchive.org/wiki/index.php/Problem_Format)
 
