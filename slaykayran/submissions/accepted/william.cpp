@@ -2,6 +2,7 @@
 #define MAXN 5001
 #define MAXH 5001
 #define INF 0x3f3f3f3f
+#define IMPOSSIBLE INF+1
 using namespace std;
 
 int N,H,R;
@@ -19,8 +20,7 @@ int rec(int num_heads, int cur_health) {
         // try defending
         int num_head_if_defend = rules[num_heads];
         int cur_health_if_defend  = cur_health-1;
-        // avoid case where we constantly defend only to lose health, this is a lost battle anyway
-        if(cur_health_if_defend > 0 && rules[num_heads] != num_heads) {
+        if(cur_health_if_defend > 0) {
             DP[num_heads][cur_health] = min(DP[num_heads][cur_health], 1+rec(num_head_if_defend, cur_health_if_defend));
         }
         // try attacking
@@ -29,8 +29,9 @@ int rec(int num_heads, int cur_health) {
         if(cur_health_if_attack > 0) {
             DP[num_heads][cur_health] = min(DP[num_heads][cur_health], 1+rec(num_head_if_attack, cur_health_if_attack));
         }
-        if(DP[num_heads][cur_health] == INF)// i.e.e impossible
-            DP[num_heads][cur_health] = INF+1;
+        if(DP[num_heads][cur_health] == INF){ // we have attempted computing this state and it's impossible
+            DP[num_heads][cur_health] = IMPOSSIBLE;
+        }
         return DP[num_heads][cur_health];
     }
 }
@@ -47,7 +48,7 @@ int main() {
         rules[n_i] = n_j;
     }
     int ans = rec(N, H);
-    if(ans >= INF)
+    if(ans == INF || ans == IMPOSSIBLE)
         cout << "retreat" << endl;
     else
         cout << ans << endl;
