@@ -1,1 +1,2 @@
-Simulate the game.
+You can solve this using 2D dynamic programming, where we calculate the minimum HP required to
+get to and r,c point on your NxN grid.

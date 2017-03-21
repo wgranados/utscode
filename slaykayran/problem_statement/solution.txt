@@ -1,1 +1,7 @@
-Simulate the game.
+We can solve this using 2D Dynamic programming, where at each state we hold the minimum sequence required to
+get the kayran to 0 heads, considering it has a certain number of heads, and your current health;
+DP[num_heads][cur_health]. We initially assume that each sub problem is possible, but it requires an undetermined
+amount of moves. Now when we solve each sub problem, we determine the hero's and kayrne's hp and head count after
+defending and attacking, and base our sub problem's solution on the solution for these two sub problem. In the case
+that it's impossible to solve this sub problem, we update our DP array to indicate that this sub problem
+was computed but was determined to be impossible.

@@ -6,6 +6,7 @@ import math
 # Not for public eyes
 # @Author: Brian Chen
 
+
 def calculateMinimumHP(dungeon):
     n = len(dungeon[0])
     need = [2**31] * (n-1) + [1]

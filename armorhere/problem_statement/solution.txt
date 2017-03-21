@@ -1,1 +1,2 @@
-Simulate the game.
+The simulation of this problem  is quite simple, the more difficult problem is determining the center from which
+the protagonist begins. Look at the official solution for details.

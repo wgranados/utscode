@@ -1,1 +1,2 @@
-Simulate the game.
+Find the maximum spanning tree of the graph with Kruskal's or Prim's for prim's you may need to add as a detrrant for
+hardrock.

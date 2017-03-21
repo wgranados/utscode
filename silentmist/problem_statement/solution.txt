@@ -1,0 +1,4 @@
+The official solution is to modify dijkstras algorithm by adding an extra dimension to the natural
+distance array used in the solution. In this case, we use dist[nodes][spells], where we keep track
+the minimum distance required to get to a node, always using a certain number of spells.
+
