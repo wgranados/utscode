@@ -4,5 +4,4 @@ utscode/*
 .idea/
 .idea/vcs.xml
 utscode/
-*.pdf
 Would skip repository problemtools/
