@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+apt-get -qq update
+apt-get install libboost-regex-dev
+apt-get install libc6
+apt-get install libgcc1
+apt-get install libgmp10
+apt-get install libgmpxx4ldbl
+apt-get install libstdc++6
+apt-get install debhelper
+apt-get install libgmp3-dev
+apt-get install automake
+apt-get install autoconf
+apt-get install texlive-full
+apt-get install tidy
+apt-get install ghostscript
+pip2 install pytest
+pip2 install pyyaml
+pip2 install pytest
+pip2 install plastex
