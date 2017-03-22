@@ -11,7 +11,8 @@ apt-get install debhelper
 apt-get install libgmp3-dev
 apt-get install automake
 apt-get install autoconf
-apt-get install texlive-full
+apt-get install texlive-recomendded
+apt-get install texlive-cryllic
 apt-get install tidy
 apt-get install ghostscript
 pip2 install pytest
