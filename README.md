@@ -1,4 +1,6 @@
 # utscode
+[![Build Status](https://travis-ci.org/wgma00/utscode.svg?branch=master)](https://travis-ci.org/wgma00/utscode)
+
 This is the official repository for the UTSCode 2017 contest. This repository holds 
 all the tools, problem statements written in LaTeX, and solutions written in Python3
  or C++.
