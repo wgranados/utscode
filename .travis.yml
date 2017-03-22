@@ -3,13 +3,11 @@ language: python
 compiler: g++
 
 before_install:
-    - sudo apt-get install buildessentials
+    - sudo apt-get install build-essential
 install:
     # installing  requirements for kattis problem tools
     # note that on debian/ubuntu pip tools are being installed to the python2 pip
     # install kattis problem tools
-    - sudo apt-get install -qq g++-4.8
-    - export CXX="g++-4.8"
     - chmod +x install.sh
     - sudo ./install.sh
     - sudo pip2 install git+https://github.com/kattis/problemtools
