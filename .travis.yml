@@ -1,6 +1,4 @@
-language: python cpp
-
-compiler: - gcc
+language: python
 
 before_install:
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
