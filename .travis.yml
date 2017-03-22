@@ -3,8 +3,7 @@ language: python
 compiler: g++
 
 before_install:
-    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-    - sudo apt-get update -qq
+    - sudo apt-get install buildessentials
 install:
     # installing  requirements for kattis problem tools
     # note that on debian/ubuntu pip tools are being installed to the python2 pip
