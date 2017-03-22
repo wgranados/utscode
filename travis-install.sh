@@ -13,6 +13,7 @@ apt-get install autoconf
 apt-get install texlive
 apt-get install texlive-recomendded
 apt-get install texlive-cryllic
+apt-get install texlive-lang-english
 apt-get install tidy
 apt-get install ghostscript
 pip2 install pytest
