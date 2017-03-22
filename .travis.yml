@@ -14,8 +14,8 @@ install:
     # installing  requirements for kattis problem tools
     # note that on debian/ubuntu pip tools are being installed to the python2 pip
     # install kattis problem tools
-    - chmod +x install.sh
-    - sudo ./install.sh
+    - chmod +x travis-install.sh
+    - sudo ./travis-install.sh
     - sudo pip2 install git+https://github.com/kattis/problemtools
 
 
