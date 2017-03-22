@@ -28,3 +28,4 @@ script:
     - verifyproblem slaykayran
     - verifyproblem standbehindbraum
     - verifyproblem thewayforward
+    - problem2pdf armorhere -l
