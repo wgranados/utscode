@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-apt-get -qq update
 apt-get install python-pkg-resources
 apt-get install dh-python
 apt-get install libboost-regex-dev
