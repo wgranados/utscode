@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 apt-get install python-pkg-resources
 apt-get install libboost-regex-dev
-apt-get install libc6
-apt-get install libgcc1
-apt-get install libgmp10
-apt-get install libgmpxx4ldbl
-apt-get install libstdc++6
 apt-get install debhelper
 apt-get install libgmp3-dev
 apt-get install automake
