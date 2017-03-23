@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 apt-get install python-pkg-resources
 apt-get install libboost-regex-dev
 apt-get install debhelper
