@@ -21,4 +21,4 @@ the validity your solutions against the current testdata.
 # Offical Facebook Page 
 Check out our official facebook page where we post updates on the event. 
 
-[UTSCode](facebook.com/utscode)
+[UTSCode](https://facebook.com/utscode)
