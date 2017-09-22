@@ -17,3 +17,8 @@ the validity your solutions against the current testdata.
 
 [Indepth information on using the Kattis problemtools](http://problemarchive.org/wiki/index.php/Problem_Format)
 
+
+# Offical Facebook Page 
+Check out our official facebook page where we post updates on the event. 
+
+[UTSCode](facebook.com/utscode)
