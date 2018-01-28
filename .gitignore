@@ -5,3 +5,4 @@ utscode/*
 .idea/vcs.xml
 utscode/
 Would skip repository problemtools/
+.vagrant/*
